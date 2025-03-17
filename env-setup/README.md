@@ -96,7 +96,7 @@ If you want to want to setup a GitHub repo from the GH client:
 
 ```bash
 gh auth login
-
+gh repo create my-demo-agent --public --source=.
 
 ### Install Agent Starter Pack
 
