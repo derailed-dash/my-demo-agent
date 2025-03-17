@@ -79,15 +79,24 @@ source .venv/bin/activate
 
 ### Initialise Git Repo
 
-
-### Git Crypt (Optional)
-
-If we're using `git crypt`:
+1. Add .gitignore
+1. Add .gitattributes
 
 ```bash
+git init
+
+# If using git crypt (optional)
 sudo apt install git-crypt
 git-crypt unlock path/to/git-crypt-key
+git add .
+git commit -m "Initial commit"
 ```
+
+If you want to want to setup a GitHub repo from the GH client:
+
+```bash
+gh auth login
+
 
 ### Install Agent Starter Pack
 
@@ -106,8 +115,3 @@ agent-starter-pack create <project-name>
 agent-starter-pack create my-demo-agent \
   --region=europe-west4 --deployment-target=cloud_run
 ```
-
-
-
-## Installing
-
